@@ -32,12 +32,15 @@ var userGuess;
 var questionNum = 0;
 var timeLeft = 7;
 var qtimer;
+var ansTimer;
+var ttimer;
 var clicked=false;
 
 
 
 
 function showQuestion(){
+    screenTimer();
     clicked = false;
     if (questionNum == questions.length){
         console.log("out of questions");
@@ -63,15 +66,20 @@ function showQuestion(){
     $(".answers").on("click",function(){
         clicked = true;
         stopTimer();
+        stopScreenTimer();
+        timeLeft = 7;
         guessed = $(this).text();
         console.log("Player guessed:  " + guessed + "on question#: "+questionNum);
         if (guessed == questions[questionNum-1].correct){
             console.log("Guess was correct!");
             correctGuesses++;
+            
+            // showAnswer();
         }
         else {
             console.log("Guess was wrong, correct answer was: "+ questions[questionNum-1].correct);
             wrongGuesses++;
+            // showAnswer();
         }
         stopTimer();
         if (questionNum == questions.length){
@@ -80,7 +88,8 @@ function showQuestion(){
             showScore();
             return;
         }
-        if (questionNum < questions.length){            
+        if (questionNum < questions.length){
+            // showAnswer();            
             showQuestion();
         }
 
@@ -93,6 +102,7 @@ function showQuestion(){
         // stopTimer();
     }
     else{
+
         startTimer();
 
     }
@@ -104,6 +114,17 @@ function showQuestion(){
 
 }
 
+
+
+
+
+function showAnswer(){
+    console.log("Showing Answer for 3 seconds");
+    $("#answersDiv").html("Youre right/wrong, answer goes here");
+    $("questionDiv").html("");
+    
+}
+
 //GAME TIMERS
 function startTimer(){
     qtimer = setTimeout(showQuestion, 7000);    
@@ -112,17 +133,47 @@ function stopTimer(){
     clearTimeout(qtimer);
 }
 
+//every second display timer
+function screenTimer(){
+    stopScreenTimer();
+    ttimer = setInterval(function(){
+        $("#timeDiv").text("Time Left: "+timeLeft+" seconds");
+        
+        if(timeLeft-1 == 0){
+            timeLeft = 7;
+        }
+        timeLeft --;
+    },1000)
+    
+}
+ 
+function stopScreenTimer(){
+    clearInterval(ttimer);
+}
+
+//GUESSED RIGHT/WRONG SCREEN TIMERS
+function startAnsTimer(){ 
+    stopAnstTimer();
+    ansTimer = setTimeout(function(){
+        console.log('in start ansTimer');
+    },5000);
+}
+function stopAnstTimer(){
+    clearTimeout(ansTimer);
+}
+
 //End of Game scoreboard
 function showScore(){
 $("#questionDiv").html("<div>Correct Answers: "+correctGuesses+"</div>"+
     "<div>Incorrect Answers: "+wrongGuesses+"</div>"+
     "<div>Unanswered questions: "+(questions.length - correctGuesses - wrongGuesses)+"</div>");
 $("#answersDiv").html("");
+$("#timeDiv").html("");
 reset_game();
 }
 
+//Game reset by resetting initial values and showing the start buttons
 function reset_game(){
-        
     correctGuesses = 0;
     wrongGuesses = 0;
     questionNum = 0;
@@ -138,7 +189,5 @@ $("#startButton").on("click", function() {
     $("#startButton").hide();
     //  Set the button alert's timeout to run three seconds after the function's called.
     showQuestion();
-    
-    
   });
         
