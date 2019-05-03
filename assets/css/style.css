@@ -10,7 +10,7 @@ body {
     position: fixed;
     opacity: .8;
     border: 4px solid #000033;
-    margin : 4% 10%;
+    margin : 3% 9%;
     border-radius: 25px;
 }
 
@@ -18,7 +18,7 @@ body {
     width: 60%;
     margin : auto; 
     font-size: 1.3em;  
-    padding-top: 8%;
+    padding-top: 3%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
@@ -80,11 +80,11 @@ body {
 #startButton{
     margin : auto;
     width : 70%;
-    font-size : 2em;
-    margin-top : 30%;
+    font-size : 1.5em;
+    margin-top : 15%;
     margin-left : 13%;
     border-radius: 5px;
-    padding : 3%;
+    padding : 2.5%;
     
 }
 
