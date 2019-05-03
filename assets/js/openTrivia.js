@@ -1,3 +1,10 @@
+//utility decode function
+
+function decodeHtml(html) {
+    var txt = document.createElement("textarea");
+    txt.innerHTML = html;
+    return txt.value;
+}
 
 
 
@@ -43,6 +50,10 @@ function getQuestions(){
         url: triviaURL,
         method: "GET"
     })
+        .fail(function() {
+            console.log( "error: api not connected" );
+        })
+    
         .then(function(response) {
             // console.log(response);
             questions = response.results;        
@@ -65,13 +76,13 @@ function getQuestions(){
             allAnswers = shuffle(allAnswers);
             for (var ct in allAnswers){
                 // allAnswers[ct]=allAnswers[ct].replace(/&quot;/g, '\\"');
-                allAnswers[ct]=decodeURI(allAnswers[ct]).replace(/&quot;/g, '\\"');
+                allAnswers[ct]=decodeHtml(allAnswers[ct]).replace(/&quot;/g, '\\"');
             }
             formattedQuestion = {
-                question : decodeURI(questions[i].question).replace(/&quot;/g, '\\"'),
+                question : decodeHtml(questions[i].question).replace(/&quot;/g, '\\"'),
                 answers : allAnswers,
                 // correct : questions[i].correct_answer.replace(/&quot;/g, '\\"')
-                correct : decodeURI(questions[i].correct_answer).replace(/&quot;/g, '\\"')
+                correct : decodeHtml(questions[i].correct_answer).replace(/&quot;/g, '\\"')
             }
             formattedQuestions.push(formattedQuestion);
             

@@ -25,8 +25,12 @@ var sample_questions = [
         correct     : "12"
     }
 ]
-//retrieves questions from openTrivia via openTrivia.js
+//retrieves questions from openTrivia via openTrivia.js 
+//fallsback to simple math questions
 var questions = getQuestions();
+// if (!questions){
+//     questions = sample_questions;
+// }
 // var questions = sample_questions;
 var qNum = 0;
 var gameDone = false;
@@ -123,14 +127,14 @@ function startAnsTimer(){
 }
 // function stopAnsTimer(){}
 
-var time = 5;
+var time = 10;
 function showTime(){
     time--;
     $("#timeDiv").html("<div>Time Remaining:  "+time+"</div>");
     
     if (time <= 0){
         stopTimer();
-        time = 7;
+        time = 10;
         displayAnswer();
         
     }
