@@ -147,13 +147,19 @@ function gameReset(){
     console.log('Resetting function started');
     $(".game").hide();
     $("#startDiv").show();
-    var msg = "<div id='restartMsg'><p>Score last round:</p>  "+ correctTotal +" correct "+ wrongTotal + " wrong</div>"
-    $("#startDiv").prepend(msg);
-    $("#restartMsg").css("padding","6px").css("margin-left","18%")
+    var msg = "<div id='rmsg1'><p>Score last round:</p>  "+ correctTotal +" correct "+ wrongTotal + " wrong</div>"
+    $("#restartMsgDiv").html(msg);
+    $("#restartMsgDiv").css("padding","6px").css("margin-left","18%")
         .css("font-size","2em");
     $("#afterQuestionDiv").hide();
     qNum = 0;
     gameDone = false;
+    correctTotal = 0;
+    wrongTotal = 0;
+    right = false;
+    correctAns = "";
+
+    
 }
 /////////////////////////////
 

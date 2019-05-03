@@ -10,6 +10,7 @@ body {
     position: fixed;
     opacity: .8;
     margin : 4% 7%;
+    border-radius: 2%;
 }
 
 #titleDiv{
@@ -27,13 +28,14 @@ body {
     
     width : 60%;
     margin : auto;
-    margin-top : 5%;
+    margin-top : 9%;
+
     text-align: center;
     font-size: 2.2em;
 }
 
 #answersDiv {
-    margin-top  : 5%;
+    margin-top  : 8%;
 }
 
 #afterQuestionDiv{
@@ -55,5 +57,5 @@ body {
     font-size : 2em;
     margin-top : 20%;
     margin-left : 10%;
- 
+    border-radius: 3%;
 }
