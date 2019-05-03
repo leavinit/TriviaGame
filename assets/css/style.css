@@ -80,10 +80,10 @@ body {
     margin : auto;
     width : 70%;
     font-size : 2em;
-    margin-top : 20%;
+    margin-top : 30%;
     margin-left : 13%;
-    border-radius: 3%;
-    padding : 1%;
+    border-radius: 5px;
+    padding : 2%;
 }
 
 @media screen and (max-width: 640px) {
@@ -142,6 +142,6 @@ body {
         font-size : 1.5em;
         width : 100%;
         margin: auto;
-        margin-top : 55%;
+        margin-top : 45%;
     }
 }
