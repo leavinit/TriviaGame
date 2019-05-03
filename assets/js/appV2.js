@@ -118,6 +118,9 @@ function displayAnswer(){
     $("#afterQuestionDiv").css("text-align","center")
     .css("font-size","1.5em");
     $("#afterQuestionDiv").html(el);
+
+    //get image
+    // $https://picsum.photos/id/143/200/200
     startAnsTimer();
 }
 
