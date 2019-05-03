@@ -114,13 +114,22 @@ function displayAnswer(){
         msg = "Your guess was correct!"
     }
     right = false;
+
     var el = $("<div id='answerMsgDiv'>").text(msg);
+    
     $("#afterQuestionDiv").css("text-align","center")
     .css("font-size","1.5em");
     $("#afterQuestionDiv").html(el);
 
-    //get image
-    // $https://picsum.photos/id/143/200/200
+    tmpImg = $("<img>")
+    tmpImg.attr("src", "http://lorempixel.com/400/300/") ;
+    tmpImg.attr("alt", "TEMP PIC");
+    tmpImg.wrap("<div class=image>");
+    tmpImg.css("margin-top","4%").css("opacity",".79")
+    .css("border","4px solid #000033").css("border-radius","2%");
+    console.log(tmpImg);
+    $("#afterQuestionDiv").append(tmpImg);
+    
     startAnsTimer();
 }
 
