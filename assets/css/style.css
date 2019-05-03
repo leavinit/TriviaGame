@@ -1,0 +1,59 @@
+
+body {
+    background-image: url("../images/backgroundHex.jpg");
+    
+}
+#containerDiv{
+    background-color: white;
+    width : 75%;
+    height: 85%;
+    position: fixed;
+    opacity: .8;
+    margin : 4% 7%;
+}
+
+#titleDiv{
+    width: 60%;
+    margin : auto; 
+    font-size: 1.5em;  
+}
+
+.game, .status, .start{
+    width: 60%;
+    margin : auto;
+}
+
+#questionDiv {
+    
+    width : 60%;
+    margin : auto;
+    margin-top : 5%;
+    text-align: center;
+    font-size: 2.2em;
+}
+
+#answersDiv {
+    margin-top  : 5%;
+}
+
+#afterQuestionDiv{
+    width: 60%; 
+    margin : auto;
+    margin-top: 10%;
+    font-size: 1.3em;
+}
+
+#timeDiv{
+    width : 60%;
+    margin : auto;
+    margin-top: 5%;
+    font-size : 1.5em;
+}
+#startButton{
+    margin : auto;
+    width : 70%;
+    font-size : 2em;
+    margin-top : 20%;
+    margin-left : 10%;
+ 
+}

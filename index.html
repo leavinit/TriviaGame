@@ -11,19 +11,22 @@
         crossorigin="anonymous">
     </script>
 
-    <!-- <link rel="stylesheet" type="text/css" href="assets/css/style.css"> -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
  
 
     <title>Trivia Game</title>
 
 </head>
 <body>
-    <div id="titleDiv">Random Trivia: The Game</div>
-    <div id="timeDiv">Time Left: </div>
-    <div id="questionDiv"></div>
-    <div id="answersDiv"></div>
-    <div id="startDiv"><button id="startButton">START</button></div>
+    <div id = "containerDiv">
+        <div id="titleDiv"><h1>Random Trivia: The Game</h1></div>
+        <div id="timeDiv" class="game">Time Left: </div>
+        <div id="questionDiv" class="game"></div>
+        <div id="answersDiv" class="game"></div>
+        <div id="startDiv" class="start"><button id="startButton">Bring on the trivia thunder!</button></div>
+        <div id="afterQuestionDiv" class="status"></div>
+    </div>
 </body>
 
-<script lang ="javascript" src="assets/js/app.js"></script>
+<script lang ="javascript" src="assets/js/appV2.js"></script>
 </html>

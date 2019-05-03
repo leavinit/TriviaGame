@@ -23,7 +23,7 @@ var questions = [
     question    :   "What is 22 - 10?",
     answers     : ["2","12","80","10"],
     correct     : "12"
-},
+}
 ]
 
 var correctGuesses = 0;
@@ -40,6 +40,7 @@ var clicked=false;
 
 
 function showQuestion(){
+    stopScreenTimer();
     screenTimer();
     clicked = false;
     if (questionNum == questions.length){
