@@ -6,7 +6,7 @@ body {
 #containerDiv{
     background-color: white;
     width : 75%;
-    height: 85%;
+    height: 100%;
     position: fixed;
     opacity: .8;
     margin : 4% 7%;
@@ -28,8 +28,8 @@ body {
     
     width : 60%;
     margin : auto;
-    margin-top : 9%;
-
+    margin-top : 5%;
+    position: flex;
     text-align: center;
     font-size: 2.2em;
 }
@@ -48,8 +48,8 @@ body {
 #timeDiv{
     width : 60%;
     margin : auto;
-    margin-top: 5%;
-    font-size : 1.5em;
+    margin-top: .5%;
+    font-size : 1.3em;
 }
 #startButton{
     margin : auto;

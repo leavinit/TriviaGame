@@ -1,6 +1,6 @@
 //VARS
 
-var questions = [ 
+var sample_questions = [ 
     {
         question    :   "What is 10 x 4?",
         answers     : ["20","30","50","40"],
@@ -25,7 +25,9 @@ var questions = [
         correct     : "12"
     }
 ]
-
+//retrieves questions from openTrivia via openTrivia.js
+var questions = getQuestions();
+// var questions = sample_questions;
 var qNum = 0;
 var gameDone = false;
 var picked = false;  //whether or not an answer was selected.
