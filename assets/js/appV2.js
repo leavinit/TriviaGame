@@ -165,7 +165,7 @@ function gameReset(){
     console.log('Resetting function started');
     $(".game").hide();
     $("#startDiv").show();
-    var msg = "<div id='rmsg1'>Score last round: <br>"+ correctTotal +" correct "+ wrongTotal + " wrong</div>"
+    var msg = "<div id='rmsg1'>Score last round: <br>"+ correctTotal +" correct<br>"+ wrongTotal + " wrong</div>"
     $("#restartMsgDiv").html(msg);
     $("#restartMsgDiv").css("padding","6px").css("margin","auto")
         .css("font-size","1.5em");

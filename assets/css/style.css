@@ -17,9 +17,10 @@ body {
 #titleDiv{
     width: 60%;
     margin : auto; 
-    font-size: 1.5em;  
-    padding-top: 2%;
-    
+    font-size: 1.3em;  
+    padding-top: 8%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
 
 .game, .status, .start{
@@ -83,18 +84,19 @@ body {
     margin-top : 30%;
     margin-left : 13%;
     border-radius: 5px;
-    padding : 2%;
+    padding : 3%;
+    
 }
 
 @media screen and (max-width: 640px) {
     #containerDiv{
         width:85%;
-        margin: 4% 8%;
-        opacity: .7;
+        margin: 4% 7%;
+        opacity: .75;
     }
     #titleDiv{
-        font-size : .71em;
-        margin-top : 7%;
+        font-size : .81em;
+        margin-top : 6%;
         width : 70%; 
         text-align: center;   
     }
