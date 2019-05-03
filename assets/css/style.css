@@ -10,8 +10,8 @@ body {
     position: fixed;
     opacity: .8;
     border: 4px solid #000033;
-    margin : 4% 7%;
-    border-radius: 2%;
+    margin : 4% 10%;
+    border-radius: 4%;
 }
 
 #titleDiv{
@@ -19,45 +19,127 @@ body {
     margin : auto; 
     font-size: 1.5em;  
     padding-top: 2%;
+    
 }
 
 .game, .status, .start{
-    width: 60%;
+    width: 65%;
     margin : auto;
 }
 
 #questionDiv {
     
-    width : 60%;
+    width : 70%;
     margin : auto;
-    margin-top : 5%;
+    margin-top : 4%;
+    margin-bottom : 3%;
     position: flex;
     text-align: center;
     font-size: 2.2em;
 }
 
 #answersDiv {
-    margin-top  : 8%;
+    margin-top  : 4%;
+    margin-bottom :2%;
+    font-size : 1.3em;
+}
+#answersDiv > div {
+    margin-top : 1.5%;
+    padding : 2%;
+    border-radius: 2%;
+}
+#afterQuestionDiv{
+    width: 80%; 
+    margin : auto;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    font-size: 1.3em;
 }
 
-#afterQuestionDiv{
-    width: 60%; 
-    margin : auto;
-    margin-top: 10%;
-    font-size: 1.3em;
+#afterQuestionDiv > img{
+    margin-top : 6%;
+    margin-bottom: 3%;
 }
 
 #timeDiv{
     width : 60%;
     margin : auto;
-    margin-top: .5%;
+    margin-top: 2.5%;
     font-size : 1.3em;
+    text-align: center;
+}
+#restartMsgDiv{
+    text-align: center;
+}
+
+#restartMsgDiv > div{
+    margin-top : 20%;
+    
 }
 #startButton{
     margin : auto;
     width : 70%;
     font-size : 2em;
     margin-top : 20%;
-    margin-left : 10%;
+    margin-left : 13%;
     border-radius: 3%;
+    padding : 1%;
+}
+
+@media screen and (max-width: 640px) {
+    #containerDiv{
+        width:84%;
+        margin: 4% 8%;
+    }
+    #titleDiv{
+        font-size : 1em;
+        margin-top : 7%;
+        width : 70%; 
+        text-align: center;   
+    }
+    #startDiv{
+        margin-top: 20%;
+        margin-bottom: 10%;
+    }
+    #startButton{
+        font-size : 1.5em;
+        margin-top : 100px;
+    }
+    #timeDiv{
+        margin-top:10%;
+    }
+    #questionDiv{
+        font-size: 1.5em;
+        width: 90%;
+        margin-top: 10%;
+    }
+    #answersDiv {
+        margin-top : 10%;
+        width:80%;
+    }
+    #answersDiv > div {
+        margin-top: 5%;
+        margin-bottom: 3%;
+        text-align: center;
+    }
+    #answerMsgDiv {
+        margin-top: 20%;
+    }
+    #afterQuestionDiv > img {
+        width : 100%;
+        height: 40%;
+        border-width: 2px;
+        margin-top: 20%;    
+    }
+    
+    #restartMsgDiv > div{
+        margin-top : 25%;
+        margin-bottom : 0%;
+    }
+    #startButton{
+        font-size : 1.5em;
+        width : 100%;
+        margin: auto;
+        margin-top : 65%;
+    }
 }

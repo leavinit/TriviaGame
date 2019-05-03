@@ -122,11 +122,11 @@ function displayAnswer(){
     $("#afterQuestionDiv").html(el);
 
     tmpImg = $("<img>")
-    tmpImg.attr("src", "http://lorempixel.com/400/300/") ;
+    tmpImg.attr("src", "https://picsum.photos/400/300") ;
     tmpImg.attr("alt", "TEMP PIC");
     tmpImg.wrap("<div class=image>");
-    tmpImg.css("margin-top","4%").css("opacity",".79")
-    .css("border","4px solid #000033").css("border-radius","2%");
+    tmpImg.css("margin-top","3  %").css("opacity",".79")
+    .css("border","4px solid black").css("border-radius","2%");
     console.log(tmpImg);
     $("#afterQuestionDiv").append(tmpImg);
     
@@ -165,10 +165,10 @@ function gameReset(){
     console.log('Resetting function started');
     $(".game").hide();
     $("#startDiv").show();
-    var msg = "<div id='rmsg1'><p>Score last round:</p>  "+ correctTotal +" correct "+ wrongTotal + " wrong</div>"
+    var msg = "<div id='rmsg1'>Score last round: <br>"+ correctTotal +" correct "+ wrongTotal + " wrong</div>"
     $("#restartMsgDiv").html(msg);
-    $("#restartMsgDiv").css("padding","6px").css("margin-left","18%")
-        .css("font-size","2em");
+    $("#restartMsgDiv").css("padding","6px").css("margin","auto")
+        .css("font-size","1.5em");
     $("#afterQuestionDiv").hide();
     qNum = 0;
     gameDone = false;
