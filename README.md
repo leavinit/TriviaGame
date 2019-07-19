@@ -1,5 +1,5 @@
 # TriviaGame
-Trivia Game
+A small trivia game to test the user's knowledge of Computer Programming trivia.
 
 ## Deployed at
 ### https://leavinit.github.io/TriviaGame/
